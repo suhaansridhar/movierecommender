@@ -6,6 +6,7 @@ export default function App(){
   return(
     <div>
       <NavBar />
+      <h2>Checking the branch</h2>
       <Routes>
         <Route path="/" />
         <Route path="/home" element={<HomePage />} />
