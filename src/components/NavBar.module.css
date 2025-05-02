@@ -1,0 +1,12 @@
+.navbar{
+    height: auto;
+    width: 100%;
+    border-bottom: 0.05rem solid white;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
