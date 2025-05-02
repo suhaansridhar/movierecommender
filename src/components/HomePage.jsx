@@ -1,10 +1,19 @@
 import { useState } from "react";
 import styles from "./HomePage.module.css";
+import { fetchMovies } from "../services/SearchApi";
 
+
+//http://www.omdbapi.com/?i=tt3896198&apikey=59837dd7
 export default function HomePage() {
   const [name, setName] = useState("");
-  function handleSearch() {
-    console.log("Searched");
+  const [error, setError] = useState('');
+  async function handleSearch(name) {
+    try{
+        const results = await fetchMovies(name);
+        setError('');
+    }catch(err){
+        setError('Failed to fetch movies!');
+    }
   }
   return (
     <div className={styles.homepage}>

@@ -35,6 +35,7 @@
     outline: none;
     width: 20%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .form button:hover{
